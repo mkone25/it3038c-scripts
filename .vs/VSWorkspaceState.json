@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Node",
+    "\\Node\\public",
     "\\Project 1"
   ],
-  "SelectedNode": "\\Project 1\\timestamps.sh",
+  "SelectedNode": "\\Node\\public\\index.html",
   "PreviewInSolutionExplorer": false
 }
