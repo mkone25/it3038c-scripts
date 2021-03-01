@@ -13,6 +13,8 @@ var server = http.createServer(function(req, res) {
 
     else if(req.url.match("/sysinfo")) {
         myHostName=os.hostname();
+        totalMemory=process.memoryUsage().heapTotal;
+        usedMemory=process.memoryUsage().heapUsed;
         html=`
         <!DOCTYPE html>
         <head>
@@ -22,9 +24,9 @@ var server = http.createServer(function(req, res) {
             <p>Hostname: ${myHostName}</p>
             <p>IP: ${ip.address()}</p>
             <p>Server Uptime: </p>
-            <p>Total Memory: </p>
-            <p>Free Memory: </p>
-            <p>Number of CPUs: </p>
+            <p>Total Memory: ${totalMemory/1024/1024}MB</p>
+            <p>Free Memory: ${usedMemory/1024/1024}MB</p>
+            <p>Number of CPUs: ${os.cpus().length}</p>
         </body>
         </html>
         `
