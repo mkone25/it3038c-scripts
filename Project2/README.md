@@ -22,11 +22,7 @@ Next is a for loop that will calculate the prime numbers in the range. Using the
         for i in range(2, num):
             if(num % i) == 0:
                 break
-
-The else section of the loop uses time.sleep to have emulate time for cacluation on the output of the prime numbers.
-
         else:
-            #Output of the prime numbers in the range
             time.sleep(1)
             print(num)
 
